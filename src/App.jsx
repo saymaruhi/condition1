@@ -1,7 +1,11 @@
 import { useState } from "react";
-import User from "./user.jsx";
+
+import Test from "./useProps.jsx";
+
 function App() {
   const [display, setdisplay] = useState(true);
+
+  
 
   return (
     <div>
@@ -10,9 +14,12 @@ function App() {
       {display ? <h2>Sayma Ruhi</h2> : <h3>condition not match</h3>}
       <button onClick={() => setdisplay(!display)}>Click me!</button>
 
-      <User />
+      
+      <Test name= {"Sayma"} age= {"35"} />
+     
     </div>
   );
 }
+
 
 export default App;
