@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Test from "./useProps";
-import College from "./arrayProps.jsx";
+import College, { DefaultProps } from "./arrayProps";
 
 function App() {
   const [display, setdisplay] = useState(true);
@@ -10,19 +10,20 @@ function App() {
     name: "Anil",
     age: "34",
     address: "USA",
-    gender: "M  F"
-  }
+    gender: "M  F",
+  };
 
   let userObject2 = {
     name: "Suhaan ",
     age: "10",
     address: "USA",
-    
-  }
- 
-  let collegeNames= ['NIT', 'MIT' , 'IIT']
+  };
 
-  
+  let collegeNames = ["NIT", "MIT", "IIT"];
+  let student = {
+    name: "Sajid",
+    grade: "A",
+  }
 
   return (
     <div>
@@ -31,14 +32,18 @@ function App() {
       {display ? <h2>Sayma Ruhi</h2> : <h3>condition not match</h3>}
       <button onClick={() => setdisplay(!display)}>Click me!</button>
 
-      <College name = {collegeNames[1]} />
-     
-      <Test user= {userObject} />
-      <Test user= {userObject2} />
-     
+      <College name={collegeNames[1]} />
+
+      <Test user={userObject} />
+      <Test user={userObject2} />
+
+      <DefaultProps name= "Ram"/>
+      <DefaultProps />
+      <DefaultProps name= "Trump"/>
+      <DefaultProps />
+
     </div>
-  )
+  );
 }
 
-
-export default App; 
+export default App;
