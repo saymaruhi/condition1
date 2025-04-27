@@ -1,9 +1,26 @@
 import { useState } from "react";
 
-import Test from "./useProps.jsx";
+import Test from "./useProps";
+import College from "./arrayProps.jsx";
 
 function App() {
   const [display, setdisplay] = useState(true);
+
+  let userObject = {
+    name: "Anil",
+    age: "34",
+    address: "USA",
+    gender: "M  F"
+  }
+
+  let userObject2 = {
+    name: "Suhaan ",
+    age: "10",
+    address: "USA",
+    
+  }
+ 
+  let collegeNames= ['NIT', 'MIT' , 'IIT']
 
   
 
@@ -14,12 +31,14 @@ function App() {
       {display ? <h2>Sayma Ruhi</h2> : <h3>condition not match</h3>}
       <button onClick={() => setdisplay(!display)}>Click me!</button>
 
-      
-      <Test name= {"Sayma"} age= {"35"} />
+      <College name = {collegeNames[1]} />
+     
+      <Test user= {userObject} />
+      <Test user= {userObject2} />
      
     </div>
-  );
+  )
 }
 
 
-export default App;
+export default App; 
