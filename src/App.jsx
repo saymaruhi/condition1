@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-import Test from "./useProps";
-import College, { DefaultProps } from "./arrayProps";
+
+import Test, {Inputfield, Fields, Try} from "./useProps";
+import College, { DefaultProps}  from "./arrayProps";
+import Checkbox from "./checkBox"
 
 function App() {
   const [display, setdisplay] = useState(true);
@@ -25,6 +27,8 @@ function App() {
     grade: "A",
   }
 
+  
+
   return (
     <div>
       <h2>Sprint1 page</h2>
@@ -36,11 +40,17 @@ function App() {
 
       <Test user={userObject} />
       <Test user={userObject2} />
+      
 
       <DefaultProps name= "Ram"/>
       <DefaultProps />
       <DefaultProps name= "Trump"/>
-      <DefaultProps />
+      
+      <Inputfield />
+      <Fields />
+      <Try />
+      <Checkbox />
+     
 
     </div>
   );

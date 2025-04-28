@@ -2,7 +2,7 @@ function College({name}){
     return(
         <div style= {{color: "red", border: "3px solid green", width: 400, backgroundColor: "pink"}}>
             <h2> Array Props</h2>
-            <h3>College Names:{name}</h3>
+            <h3>College Name:{name}</h3>
         </div>
     )
 }
@@ -19,4 +19,4 @@ function DefaultProps({name="No Data"}){
         </div>
     )
 }
-export {DefaultProps}
+export {DefaultProps} 
