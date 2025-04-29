@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Test, {Inputfield, Fields, Try} from "./useProps";
 import College, { DefaultProps}  from "./arrayProps";
-import Checkbox from "./checkBox"
+import Skills from "./checkBox"
 
 function App() {
   const [display, setdisplay] = useState(true);
@@ -49,7 +49,7 @@ function App() {
       <Inputfield />
       <Fields />
       <Try />
-      <Checkbox />
+      <Skills />
      
 
     </div>
